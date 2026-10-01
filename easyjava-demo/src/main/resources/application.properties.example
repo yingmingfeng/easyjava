@@ -11,5 +11,5 @@ spring.datasource.hikari.pool-name=easyjavaPool
 spring.datasource.hikari.max-lifetime=1800000
 spring.datasource.hikari.connection-timeout=30000
 spring.datasource.hikari.connection-test-query=SELECT 1
-# \u6307\u5B9A MyBatis \u4F7F\u7528\u6807\u51C6\u8F93\u51FA\uFF08\u63A7\u5236\u53F0\uFF09\u6253\u5370 SQL
+# 指定 MyBatis 使用标准输出（控制台）打印 SQL
 mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl

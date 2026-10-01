@@ -2,35 +2,35 @@ db.driver-class-name=com.mysql.cj.jdbc.Driver
 db.url=jdbc:mysql://localhost:3306/your_database?useSSL=false&serverTimezone=GMT%2B8
 db.username=your_username
 db.password=your_password
-#\u662F\u5426\u5FFD\u7565\u8868\u524D\u5634 tb_product_info => product_info
+#是否忽略表前缀 tb_product_info => product_info
 ignore.table.prefix=true
-#\u9700\u8981\u5FFD\u7565\u7684\u5C5E\u6027(\u914D\u5408lombok\u6CE8\u89E3\u4F7F\u7528,\u4F7F\u7528@JsonIgnore\u6CE8\u89E3\u4F1A\u6709\u51B2\u7A81)
+#需要忽略的属性(配合lombok注解使用,使用@JsonIgnore注解会有冲突)
 ignore.bean.tojson.field=companyId,status
 ignore.bean.tojson.expression=@JsonIgnoreProperties({%s})
 ignore.bean.tojson.class=import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-#\u65E5\u671F\u683C\u5F0F\u5E8F\u5217\u5316
+#日期格式序列化
 bean.date.format.expression=@JsonFormat(pattern = "%s",timezone = "GMT+8")
 bean.date.format.class=import com.fasterxml.jackson.annotation.JsonFormat;
-#\u65E5\u671F\u683C\u5F0F\u53CD\u5E8F\u5217\u5316
+#日期格式反序列化
 bean.date.unformat.expression=@DateTimeFormat(pattern = "%s")
 bean.date.unformat.class=import org.springframework.format.annotation.DateTimeFormat;
-#\u4F7F\u7528lombok\u6CE8\u89E3\u751F\u6210setter\u548Cgetter
+#使用lombok注解生成setter和getter
 bean.setter.expression=@Setter
 bean.setter.class=import lombok.Setter;
 bean.getter.expression=@Getter
 bean.getter.class=import lombok.Getter;
-#\u53C2\u6570bean\u540E\u7F00
+#参数bean后缀
 suffix.bean.query=Query
-#\u53C2\u6570\u6A21\u7CCA\u641C\u7D22\u540E\u7F00
+#参数模糊搜索后缀
 suffix.bean.query.fuzzy=Fuzzy
-#\u53C2\u6570\u65E5\u671F\u8D77\u6B62
+#参数日期起止
 suffix.bean.query.time.start=Start
 suffix.bean.query.time.end=End
-#mapper\u7684\u540E\u7F00
+#mapper的后缀
 suffix.mappers=Mapper
-#\u6587\u4EF6\u8F93\u51FA\u8DEF\u5F84
+#文件输出路径(生成代码的输出根目录,需以 /src/main/ 结尾)
 path.base = /path/to/easyjava-demo/src/main/
-#\u5305\u540D
+#包名
 package.base = com.easyjava
 package.po = entity.po
 package.vo = entity.vo
@@ -43,6 +43,5 @@ package.mappers = mappers
 package.service = service
 package.service.impl = service.Impl
 package.controller = controller
-##\u4F5C\u8005\u540D\u79F0
+##作者名称
 comment.author=YourName
-
