@@ -1,0 +1,37 @@
+### Build output ###
+target/
+*.class
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+### VS Code ###
+.vscode/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Local secrets - never commit real credentials ###
+# Copy application.properties.example to application.properties and fill in your own values.
+application.properties
